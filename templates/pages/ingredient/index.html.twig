@@ -4,26 +4,26 @@
 
 {% block body %}
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">Numero</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Date de création</th>
+            </tr>
+        </thead>
+        <tbody>
             {% for ingredient in ingredients %}
-                <div class="">
-                    <p>{{ ingredient.name }}</p>
-                </div>
+                <tr>
+                    <th scope="row">{{ ingredient.id}}</th>
+                    <td>{{ ingredient.name }}</td>
+                    <td>{{ ingredient.price }}</td>
+                    <td>{{ ingredient.createdAt }}</td>
+                </tr>
             {% endfor %}
-            <a href="#" class="card-link">Card link</a>
-           
-        </div>
-    </div>
+        </tbody>
+    </table>
 
 
-
-    <div class="container">
-        <h1>Mes Ingredients</h1>
-
-       
-    </div>
 {% endblock %}

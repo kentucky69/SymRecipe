@@ -13,10 +13,8 @@ class IngredientController extends AbstractController
     #[Route('/ingredient', name: 'app_ingredient')]
     public function index(IngredientRepository $repository): Response
     {
-        $ingredients = $repository->findAll();
-
         return $this->render('pages/ingredient/index.html.twig', [
-            'ingredients' => $ingredients
+            'ingredients' => $repository->findAll()
         ]);
     }
 }

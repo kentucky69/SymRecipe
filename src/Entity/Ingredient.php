@@ -30,7 +30,8 @@ class Ingredient
 
     #[ORM\Column]
     #[Assert\NotNull()]
-    private ?\DateTimeImmutable $createdAt = null;
+    private ?string $createdAt = null;
+
 
     /**
      *  constructor
@@ -69,7 +70,7 @@ class Ingredient
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
