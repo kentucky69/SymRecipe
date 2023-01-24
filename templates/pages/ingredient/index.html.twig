@@ -19,11 +19,15 @@
                     <th scope="row">{{ ingredient.id}}</th>
                     <td>{{ ingredient.name }}</td>
                     <td>{{ ingredient.price }}</td>
-                    <td>{{ ingredient.createdAt }}</td>
+                    <td>{{ ingredient.createdAt|date("m/d/Y") }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(ingredients) }}
+    </div>
 
 
 {% endblock %}
