@@ -25,9 +25,13 @@
         </tbody>
     </table>
 
-    <div class="navigation">
+    <nav aria-label="...">
+        <ul class="pagination pagination-lg d-flex justify-content-center">
         {{ knp_pagination_render(ingredients) }}
-    </div>
+        </ul>
+    </nav>
+
+    
 
 
 {% endblock %}
